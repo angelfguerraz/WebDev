@@ -1,2 +1,2 @@
-# html-n-css
+# WebDev
 Html and css basics.
