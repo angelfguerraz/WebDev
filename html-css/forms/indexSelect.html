@@ -12,12 +12,22 @@
 <body>
     <header></header>
     <main>
-        <select name="courses" id="">
-            <option value="js">js</option>
+        <!-- <select name="courses" id="">
+            <option value="js">javscript</option>
             <option value="html">html</option>
             <option value="css">css</option>
             <option value="python">python</option>
-        </select>
+        </select> -->
+
+        <!--This is the right way to make a formular-->
+        <input list="courses">
+        <datalist id="courses">
+            <option value="javascript"></option>
+            <option value="html"></option>
+            <option value="css"></option>
+            <option value="python"></option>
+        </datalist>
+        <input type="submit">
     </main>
     <footer></footer>
 </body>
