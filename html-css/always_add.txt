@@ -1,0 +1,8 @@
+Always add this at the beginning of every css class:
+
+* {
+    /*Avoids unwished scrolling*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
