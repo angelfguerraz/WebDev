@@ -1,5 +1,53 @@
-.par {
-    font-family: 'Times New Roman', Times, serif;
-    color: red;
-    border: 1px solid green;
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/*
+    Anatomy of a CSS rule:
+    selector {
+        property: property_value; (aka: Declaration)
+    }
+
+*/
+
+.main-nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0%;
+    background-color: #565757;
+    border: 1px solid blue;
+}
+
+.main-nav__item {
+    display: inline-block;
+}
+
+.main-nav__item a {
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+/*Pseudo-class: Defines element during an STATES*/
+.main-nav__item a:hover {
+    color: blue;
+}
+
+.main-nav__item a:active {
+    color: chartreuse;
+}
+
+/*Pseudo-Element: Defines an ELEMENT itself*/
+
+/*add this before the element*/
+.main-nav__item a::before {
+    color: whitesmoke;
+    content: " | ";
+}
+
+/*add this after element*/
+.main-nav__item a::after {
+    color: whitesmoke;
+    content: " | ";
 }
