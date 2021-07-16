@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    background-color: #8f57fd;
+    font-family: 'Mulish', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*relative size*/
+    height: 80px;
+    background-color: #21c08b;
+    align-items: center;
+}
+
+.header__img {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+}
+
+.header__menu:hover ul,
+ul:hover {
+    margin-top: 0px;
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.header__menu--profile {
+    display: flex;
+    margin-right: 8px;
+    align-items: center;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.header__menu--profile p {
+    margin: 0px;
+    color: white;
+}
+
+.main {
+    height: 300px;
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+}
+
+.main__input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    /*relative size*/
+    width: 70%;
+    padding: 0px 20px;
+}
+
+/*remove outline around text input boxes*/
+.main__input:focus {
+    outline: none;
+}
+
+.login{
+    background: linear-gradient(#21c08b, #ab88ff);
+    display: flex;
+    /*
+        align-items: ; --> vertical 
+        justify-content: ; --> horizontal
+    */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.login__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.login__container--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form label{
+    font-size: 14px;
+}
+
+.login__container--remember-me{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__container--remember-me a{ 
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover{ 
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* > all divs are taken*/
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img{
+    margin-right: 10px;
+}
+
+.login__container--register{
+    font-size: 14px;
+}
+
+.login__container--register a{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+
+.input{
+    background-color: transparent;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px solid white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.button{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+.footer{
+    background-color: #ab88ff;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Mulish', sans-serif;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
