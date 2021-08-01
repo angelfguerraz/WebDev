@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./figures.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Geometric Figures Calculator</h1>
+        <p>Beta Version</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Square:</h2>
+            <form action="">
+                <label for="inputSquare">Insert the square lengths:</label>
+
+                <div class="wrapper">
+                    <input id="inputSquare" type="number">
+                    <button type="button" onclick="square_perimeter()">Perimeter</button>
+                    <button type="button" onclick="square_area()">Area</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Triangle:</h2>
+            <form action="">
+                <label for="inputTriangle">
+                    Insert all triangle sides:
+                </label>
+
+                <ol>
+                    <li>
+                        <label for="">Side:</label>
+                        <input id="inputTriangle1" type="number">
+                    </li>
+                    <li>
+                        <label for="">Side:</label>
+                        <input id="inputTriangle2" type="number">
+                    </li>
+
+                    <li>
+                        <label for="">Base:</label>
+                        <input id="inputTriangle3" type="number">
+                    </li>
+                </ol>
+
+                <button type="button" onclick="triangle_perimeter()">
+                    Perimeter</button>
+                <button type="button" onclick="triangle_area()"> Area
+                </button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Circle:</h2>
+            <form action="">
+                <label for="inputCircle">Insert Circle radius</label>
+                <input id="inputCircle" type="number">
+                <button type="button" onclick="circle_diameter()"> Diameter </button>
+                <button type="button" onclick="circle_area()"> Area </button>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
