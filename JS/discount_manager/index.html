@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <header>This is a header</header>
+    <header>
+        <h1>Discount calculator</h1>
+    </header>
 
     <main>
         <section>
             <h2>Digit your price:</h2>
-            <label for="price">Article price: </label>
+            <label for="price">Price: </label>
             <input id="price" type="number">
             <label for="discount">Discount: </label>
             <input id="discount" type="number">
             <button type="button" onclick="calculate_discount()"> Final price</button>
+
+            <p id="newPrice"></p>
         </section>
     </main>
 

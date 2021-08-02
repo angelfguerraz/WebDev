@@ -3,6 +3,11 @@ function calculate_discount() {
 
     const d = parseInt(document.getElementById("discount").value)
 
-    console.log((p * (100 - d)) / 100)
-    return (p * (100 - d)) / 100
+    let new_price = (p * (100 - d)) / 100
+
+    const result = document.getElementById("newPrice")
+    result.innerText = "New price: $" + new_price
+
+    // console.log((p * (100 - d)) / 100)
+    return new_price
 }
