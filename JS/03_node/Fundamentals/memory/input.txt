@@ -1,0 +1,3 @@
+I'm a file of type .txt
+
+I'll be read as a data stream
