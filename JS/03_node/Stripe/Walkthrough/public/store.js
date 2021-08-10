@@ -26,9 +26,10 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+// Pop up window for purchase:
 var stripeHandler = StripeCheckout.configure({
     key: stripePublicKey,
-    locale: 'en',
+    locale: 'auto',
     token: function(token) {
         var items = []
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -72,6 +73,8 @@ var stripeHandler = StripeCheckout.configure({
 function purchaseClicked() {
     var priceElement = document.getElementsByClassName('cart-total-price')[0]
     var price = parseFloat(priceElement.innerText.replace('$', '')) * 100
+
+    // opens the pop up window
     stripeHandler.open({
         amount: price
     })
