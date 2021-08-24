@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <Header>
+        <nav></nav>
+    </Header>
+    <main>
+        <section>
+            <h3>Form</h3>
+            <form action="">
+                <label for="name">
+                    <span>Your name:</span>
+                    <input id="name" type="text" placeholder="Your name here">
+                </label>
+                <label for="start-date">
+                    <span>Start date:</span>
+                    <input id="start-date" type="date">
+                </label>
+                <label for="study-hours">
+                    <span>Study hours:</span>
+                    <input id="study-hours" type="time">
+                </label>
+            </form>
+        </section>
+        <section>
+            <h3>Calendar</h3>
+            <form action="">
+                <label for="calendar">
+                    <span>Calendar:</span>
+                    <input type="datetime-local" id="calendar">
+                </label>
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h3>__name__</h3>
+            <form action="">
+                <label for="name">
+                    <span>Name:</span>
+                    <input required type="text" placeholder="Your name here" id="name">
+                </label>
+                <label for="email">
+                    <span>Email</span>
+                    <input required type="email" placeholder="Your email here" autocomplete="email" id="email">
+                </label>
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h3>List Select</h3>
+            <input list="courses">
+            <datalist id="courses">
+                <option value="JS">JS</option>
+                <option value="html5">html5</option>
+                <option value="css3">css3</option>
+            </datalist>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
