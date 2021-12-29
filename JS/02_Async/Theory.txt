@@ -1,6 +1,0 @@
-
-CALLBACK: Function, which receives a function as parameter. When called this is than executed.
-
-** XmlHttpRequest: Previous way to make Callbacks. (Nowadays 'Fetch', more later). Xhttp does not make use of Promises. 
-
-** Error: predefined class in JavaScript for Error-handling  
