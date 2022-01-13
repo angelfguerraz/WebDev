@@ -1,0 +1,29 @@
+HEAD:
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="This tag will display a description under the webpage main name">
+<meta name="robots" content="index, follow">
+<link rel=”shortcut icon" href=”<path_favicon>”>
+
+BODY:
+
+IMAGES:
+<figure>
+<img loading="lazy"  src="manzana.png" alt="People">
+<figcaption> _insert caption_ </figcaption>
+</figure>
+
+FORMS:
+<form action="">
+                <label for="clock">
+                    <span>Time input</span>
+                    <input type="time" name="clock" id="clock">
+                </label>
+		<input type="submit">
+</form>
+
+CSS:
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
