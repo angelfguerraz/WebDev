@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /*
+        1 rem = 10px
+        1.6 rem = 16px
+    */
+  font-size: 62.5%;
+}

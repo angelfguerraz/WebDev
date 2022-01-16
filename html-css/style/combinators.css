@@ -9,9 +9,16 @@ h2 + p {
   color: red;
 }
 
-h2 ~ p{
-    /*As far as there is an h2 as general brother, all p will be affected*/
-    color: green;
+h2 ~ p {
+  /*As far as there is an h2 as general brother, all p will be affected*/
+  color: green;
 }
 
+.container {
+  border: 2px solid green;
+  margin-top: 20px;
+}
 
+.container > p {
+  color: red;
+}
