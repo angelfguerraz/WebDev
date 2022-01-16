@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 + p {
+  /*only p next to h2 will be affected*/
+  color: red;
+}
+
+h2 ~ p{
+    /*As far as there is an h2 as general brother, all p will be affected*/
+    color: green;
+}
+
+
