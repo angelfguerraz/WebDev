@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  border: 0.2rem solid purple;
+}
+
+.container {
+  margin: 2.5rem;
+  border: 0.2rem dotted black;
+  display: inline-block;
+}
+
+.box {
+  margin: 0 auto;
+  display: inline-block;
+  background-color: red;
+  width: 10rem;
+  height: 10rem;
+}
+
+.box-text{
+    display: inline-block;
+    margin-top: 40rem;
+}
+
+#one{
+    position: relative;
+    left: 25rem;
+    margin-bottom: 40rem;
+
+}
+
+#two {
+  background-color: green;
+  width: 50rem;
+  height: 50rem;
+}

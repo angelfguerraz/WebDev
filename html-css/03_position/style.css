@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.header-nav__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.header-nav-item{
+    border: .2rem solid black;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    padding: 2rem;
+}

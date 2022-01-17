@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__container {
+  border: 0.3rem solid black;
+  display: flex;
+  flex-direction: column; /*Reverts main axis. Now Vertical!!*/
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+/*JUSTIFY-CONTENT*/
+.justify-content {
+  border: 0.2rem solid blue;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.box__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.justify-content .box-center {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  width: 23rem;
+  height: 23rem;
+}
+
+.justify-content .box-start {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: start;
+  width: 23rem;
+  height: 23rem;
+}
+
+.justify-content .box-end {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: end;
+  width: 23rem;
+  height: 23rem;
+}
+
+.justify-content .box-space-around {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: space-around;
+  width: 23rem;
+  height: 23rem;
+}
+
+.justify-content .box-space-between {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 23rem;
+  height: 23rem;
+}
+
+.justify-content .box-space-evenly {
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: space-evenly;
+  width: 23rem;
+  height: 23rem;
+}
+
+/*ALIGN_ITEMS*/
+.align-items {
+  border: 0.2rem solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.align-items .box-center {
+  border: 0.1rem solid black;
+  display: flex;
+  align-items: center;
+  width: 23rem;
+  height: 23rem;
+}
+
+.align-items .box-baseline {
+  border: 0.1rem solid black;
+  display: flex;
+  align-items: baseline;
+  width: 23rem;
+  height: 23rem;
+}
+
+.align-items .box-flex-end {
+  border: 0.1rem solid black;
+  display: flex;
+  align-items: flex-end;
+  width: 23rem;
+  height: 23rem;
+}
+
+.align-items .box-flex-start {
+  border: 0.1rem solid black;
+  display: flex;
+  align-items: flex-start;
+  width: 23rem;
+  height: 23rem;
+}
+
+.align-items .box-stretch {
+  border: 0.1rem solid black;
+  display: flex;
+  align-items: stretch;
+  width: 23rem;
+  height: 23rem;
+}
+
+.box {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.box1 {
+  background-color: blue;
+}
+.box2 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: burlywood;
+}
+.box4 {
+  background-color: cadetblue;
+}
+.box5 {
+  background-color: coral;
+}
+.box6 {
+  background-color: slateblue;
+}

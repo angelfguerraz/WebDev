@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header{
+    border: .3rem solid black;
+    background-color: antiquewhite;
+}
+
+.header-nav{
+    border: .1rem solid red;
+}
+
+
+.header-nav__container {
+  width: 100vw;
+  height: 10vh;
+  background-color: slateblue;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.header-nav-item {
+  display: flex;
+  border: 0.1rem solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-nav-item a {
+  color: antiquewhite;
+  text-decoration: none;
+}

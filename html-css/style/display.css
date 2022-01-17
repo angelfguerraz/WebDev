@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  border: 0.2rem solid purple;
+}
+
+.display {
+  margin: 2rem;
+  border: 0.2rem solid purple;
+}
+
+.box-container {
+  border: 0.2rem solid green;
+}
+
+.box {
+  border: 0.1rem solid blue;
+}
+
+.display:nth-child(1) .box {
+  display: block;
+}
+.display:nth-child(2) .box {
+  display: inline;
+}
+.display:nth-child(3) .box {
+  display: inline-block;
+}

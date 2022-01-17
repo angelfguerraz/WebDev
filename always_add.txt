@@ -6,6 +6,31 @@ General Sibling: div ~ p {...}
 Child: div > p {...}
 Descendant: div p {...}
 
+FLEXBOX:
+
+.conatiner{
+display: flex /*Comes in the container, affects the children*/
+}
+
+justify-content: main axis (usually horizontal)
+align-item: cross axis (usually vertical)
+flex-direction: row || column /*defines main axis. Default: row*/
+
+JUSTIFY-CONTENT:
+*center
+*end
+*start
+*space-around
+*space-between
+*space-evenly
+
+ALIGN-ITEMS:
+*baseline
+*center
+*flex-end
+*flex-start
+*stretch
+
 !!! #### !!!
 
 HEAD:
