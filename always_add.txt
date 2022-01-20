@@ -31,6 +31,12 @@ ALIGN-ITEMS:
 *flex-start
 *stretch
 
+
+RESPONSIVE DESIGN:
+(*) Mostly Fluid
+
+
+
 !!! #### !!!
 
 HEAD:
