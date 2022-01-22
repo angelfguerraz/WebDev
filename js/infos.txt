@@ -1,0 +1,12 @@
+JAVASCRIPT
+
+* Dinamic: Runs in RUNTIME phase, without needing to be compiled.
+* Interpreted: Just intime compiler. Browser reads 1:1 the code and executes it.
+* Backward compatible: New versions of the language won't damage the started programs.
+			Nonetheless, in order to apply them one should use js compilers, e.g; Babel. 
+
+* Hoisting: Calling/Using a variable that hasn't been declared or initialized yet.
+		The compiler declares all functions and variables at the top of the programm, if nothing given than __undifined__
+
+* Coertion: Changing variable-types, either implicit (e.g: 1+"2", 2*"3"), or ecplicit applying function methods
+  
