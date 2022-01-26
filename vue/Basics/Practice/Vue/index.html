@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Basics -- AFGZ</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="app" v-bind:style="{background: '#f4f4f4'}">
+
+        <h1>{{intro}}</h1>
+        <span v-bind:title="message">
+            Hover me for a few seconds 😉
+        </span>
+
+        <div v-bind:style="{
+            border: '.5rem solid red',
+            padding: '1rem',
+        }">
+            <div class="container">
+                <div class="box" id="box1" v-show="showBox">
+                    <p>1</p>
+                </div>
+                <div class="box" id="box2" v-show="showBox">
+                    <p>2</p>
+                </div>
+                <div class="box" id="box3" v-show="showBox">
+                    <p>3</p>
+                </div>
+                <div class="box" id="box4" v-show="showBox">
+                    <p>4</p>
+                </div>
+                <div class="box" id="box5" v-show="showBox">
+                    <p>5</p>
+                </div>
+            </div>
+            <button v-on:click="toggleBox">
+                Toggle Boxes
+            </button>
+        </div>
+
+
+        <!--v-if-->
+        <div>
+            <h3>v-if</h3>
+            <p>In this Container, Boxes will be created by applying the <b>v-if</b> directive</p>
+
+            <p>While increasing the value of <i>numberOfBoxes</i> 1 to 5 boxes will be displayed</p>
+            <div class="container">
+                <div class="box" id="box1" v-if="numberOfBoxes >= 1 ">
+                    <p>1</p>
+                </div>
+                <div class="box" id="box2" v-if="numberOfBoxes >= 2">
+                    <p>2</p>
+                </div>
+                <div class="box" id="box3" v-if="numberOfBoxes >= 3">
+                    <p>3</p>
+                </div>
+                <div class="box" id="box4" v-if="numberOfBoxes >= 4">
+                    <p>4</p>
+                </div>
+                <div class="box" id="box5" v-if="numberOfBoxes >= 5">
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+
+        <!--v-if-else-->
+        <div>
+            <h3>v-if -- v-else</h3>
+            <p>
+                With the Conditional-Directives <b>v-if</b> and <b>v-else</b> thw following box will be able to change
+                color.
+            </p>
+            <div class="container">
+                <p>
+                    Number of Boxes: {{numberOfBoxes}}
+                </p>
+                <div id="box1" class="box" v-if="numberOfBoxes == 1">
+                    Box
+                </div>
+                <div id="box2" class="box" v-if="numberOfBoxes == 2">
+                    Box
+                </div>
+                <div id="box3" class="box" v-if="numberOfBoxes == 3">
+                    Box
+                </div>
+                <div id="box4" class="box" v-if="numberOfBoxes == 4">
+                    Box
+                </div>
+                <div id="box5" class="box" v-if="numberOfBoxes == 5">
+                    Box
+                </div>
+            </div>
+        </div>
+
+        <!--v-show-->
+        <div>
+            <h3>v-show</h3>
+            <p>
+                While the <b>v-if</b>-Directive deletes the whole DOM-Element, the <b>v-show</b> just plays with the
+                <i>display</i> Property of the Tags changing it to <i>display:nbox1</i>.
+            </p>
+            <div class="container">
+                <p v-show="numberOfBoxes == 1">🔵</p>
+                <p v-show="numberOfBoxes == 2">🟢 </p>
+                <p v-show="numberOfBoxes == 3">🟡</p>
+                <p v-show="numberOfBoxes == 4">🟠</p>
+                <p v-show="numberOfBoxes == 5">🔴</p>
+
+            </div>
+        </div>
+
+        <!--v-for-->
+        <div>
+            <h3>v-for</h3>
+            <p></p>
+            <div class="container">
+                <div>
+                    <span>This is an array displayed with <b>v-for</b></span>
+                    <ul v-bind:style="{'list-style':'none'}">
+                        <li v-for="(b, i) in boxes" v-bind:key="b">
+                            Index: {{i}} -- boxes[{{i}}] = {{b}}
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>This is an object displayed with <b>v-for</b></span>
+                    <ul v-bind:style="{
+                        'list-style':'none'
+                    }">
+                        <li v-for="(value, key, index) in obj">
+                            Index: {{index}} -- Key: {{key}} -- Value: {{value}}
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>This is an Array of Objects</span>
+                    <ul v-bind:style="{
+                        'list-style':'none'
+                    }">
+                        <li v-for="(b in boxes_obj" v-bind:key="b.id">
+                            id:{{b.id}} -- content: {{b.content}}
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!--v-on-->
+        <div>
+            <h3>v-on</h3>
+            <h4>Event-Handling</h4>
+            <p>
+                <b>v-on</b> connects with the <i>methods</i> Element within Vue. This triggers the functionality with
+                the given name.
+            </p>
+            <div class="container">
+
+                <div class="box" id="box1" v-show="showBox">
+                    {{boxes[0]}}
+                </div>
+
+            </div>
+            <span><i>Syntax: v-on:__event-name__="function-to-call"</i></span>
+            <div class="container">
+                <button v-on:click="toggleBox">
+                    Toggle Box
+                </button>
+                <button v-on:mouseover="toggleBox">
+                    <span> 🔵 </span>
+                </button>
+            </div>
+
+        </div>
+
+        <!--v-bind:class{...} v-bind:id{...}-->
+        <div>
+            <div>
+                <h3>v-bind:class{...} v-bind:id{...}</h3>
+                <p>
+                    In this case we apply the <b>v-bind:id=" 'box' + box.id" </b> Directive to display 5 boxes
+                    dynamically.
+                    <br>
+                    The inside color is changed with <b>v-bind:class="colors[i]"</b> Directive.
+                    <br>
+                    As we can see, the output resembles the the one of the first container.
+                </p>
+
+                <div class="container">
+                    <ul v-for="(b,i) in boxes_obj" v-bind:style="{
+                        display: flex,
+                        'justify-content':'center',
+                        'list-style':'none'
+                    }">
+                        <li class="box" v-bind:id="'box'+b.id">
+                            {{b.content}}
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div class="container">
+
+                    <div v-for="(b, i) in boxes_obj">
+                        <div class="box" v-bind:class="colors[i]" v-bind:id=" 'box'+b.id">
+                            {{b.content}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <p>The following Box changes along the value of <i>numberOfBoxes</i></p>
+            <div>
+                <div class="container">
+                    <div class="box" v-bind:id=" 'box'+numberOfBoxes " v-bind:class="colors[numberOfBoxes-1]"
+                        v-show="numberOfBoxes > 0">
+                        {{ boxes_obj[numberOfBoxes-1].content }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--v-bind:style="{...}"-->
+        <div v-bind:style="{
+            display:'flex',
+            'flex-direction':'column',
+            'align-items':'center',
+            'justify-content':'space-evenly',
+            'flex-wrap': 'wrap',
+            width:'100'+'%'
+        }">
+            <h3>v-bind:style</h3>
+            <p>
+                With help of <b>v-bind:style{background: ...}</b> one can easily implement a Dark-Mode changer
+            </p>
+            <div class="container" v-bind:style=" {background: '#'+color} ">
+
+                <div v-for="(box,i) in boxes_obj">
+                    <div class="box" v-bind:id="'box'+box.id">
+                        {{box.content}}
+                    </div>
+                </div>
+
+            </div>
+            <button v-on:click="darkMode">
+                {{ darkModeOn ? "Turn on Light Mode" : "Turn on Dark Mode"}}
+            </button>
+        </div>
+
+        <!--v-model-->
+        <div>
+            <h3>v-model</h3>
+            <h4>Two-Way Data-Binding</h4>
+            <p>
+                With <b>v-model</b> now we're able to customize elements with user input
+            </p>
+            <div class="container">
+                <div class="box" v-bind:id="'box'+numberOfBoxes" v-bind:class="colors[numberOfBoxes-1]">
+                    {{numberOfBoxes}}
+                </div>
+            </div>
+
+            <input type="number" v-model="numberOfBoxes">
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

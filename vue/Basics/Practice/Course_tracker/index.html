@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Tracker</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="container">
+            <h1>{{title}}</h1>
+
+            <h3>
+                {{name}}
+                {{time}}
+            </h3>
+
+            <div class="input-field">
+                <input v-model="name" type="text" placeholder="Course name" required>
+                <input v-model="time" type="number" placeholder="Hours per Course" min="0" required>
+                <button v-on:click="addCourse">
+                    Add Course
+                </button>
+            </div>
+
+            <h4><b>Total time: </b>{{totalTime > 0? totalTime : noCourses}}</h4>
+
+            <div>
+                <ul v-for="(c,i) in courses">
+                    <li>
+                        <span v-if="totalTime <= 0">
+                            {{noCourses}}
+                        </span>
+                        <span v-show="courses.length">
+                            {{i+1}} -- {{c.name}} -- {{c.time}}
+                        </span>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

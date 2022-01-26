@@ -1,0 +1,50 @@
+## VUE ##
+Link Vue:
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+-- Vue Object:
+Vue.component('comp_name',{
+	data(){...},
+	methods:{...},
+	template:`html_code for component`
+})
+
+new Vue({
+	el:'#app',
+	data(){return {...}},
+	computed: {...},
+	watch: {...},
+	methods:{...}
+})
+
+!! All directives are straight conected with the Vue-Data
+-- Dynamic attributes (Tag Properties):
+v-bind: Binds Data-Object with DOM-Tag-Attributes in html
+
+v-bind:class="{
+	...Changes the Element-Class depending on Conditions ...
+}"
+
+!! v-if eliminates the element from the DOM
+v-if: Displays if a condition is met
+v-if-else: ...
+v-else: No value needed
+
+!! v-show only affects the display property
+v-show: displays if a condition is met
+
+v-for: works as a standard for-loop
+v-bind:key : avoids losing the reference list in case of updates
+Syntax:
+v-for="(n,i) in array" v-bind:key="n"
+
+v-on:__event__ : Event Handling. Function is executed when Event occurs.
+Syntax
+v-on:click="to_call_function"
+
+v-model: Allows 2-way-data-binding
+Syntax:
+v-model="__property__"
+--
+
