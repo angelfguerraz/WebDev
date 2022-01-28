@@ -37,6 +37,8 @@ Vue.component('coinDetail', {
     <img 
       v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices" v-bind:src="coin.img" v-bind:alt="coin.name">
 
+      <span v-on:click="toggleShowPrices">{{showPrices? '🙉' : '🙈' }}</span>
+
     <h1 
     v-bind:class="{
     orange: coin.changePercent === 0,

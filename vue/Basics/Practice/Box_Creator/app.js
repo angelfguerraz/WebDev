@@ -5,6 +5,7 @@ new Vue({
         return {
             txt: '',
             color: '',
+            nBoxes: 0,
 
             boxes: [],
 
@@ -21,13 +22,22 @@ new Vue({
     computed: {},
 
     methods: {
-        createBox(){
+        createBoxes() {
+            for (var i = 0; i < parseInt(this.nBoxes); i++) {
+                this.createBox()
+
+            }
+        },
+
+        createBox() {
             let newBox = {
                 width: parseInt(this.box.width),
                 height: parseInt(this.box.height),
                 color: this.box.color,
                 content: this.box.content
             }
+
+            this.boxes.push(newBox)
         }
     }
 })

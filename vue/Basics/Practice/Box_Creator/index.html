@@ -14,30 +14,63 @@
 
     <div id="app">
 
+        <h1>
+            Box Creator with Vue
+        </h1>
+
         <div class="container">
             <div class="container-display">
-
-                <div v-bind:style="{
-                    border:'2px solid'+box.color,
-                    color:box.color,
-                    width:box.width+'px',
-                    height:box.height+'px',
-                }">
+                <div v-for="(box,i) in boxes" v-bind:style="{
+                        border:'.2rem solid '+box.color,
+                        color:box.color,
+                        width:box.width+'px',
+                        height:box.height+'px',
+                    }">
                     {{box.content}}
                 </div>
-
             </div>
             <div class="container-settings">
 
-                <input v-model="box.width" type="number" min="50">
-                <input v-model="box.height" type="number" min="50">
-                <input v-model="box.color" type="color">
-                <input v-model="box.content" type="text">
-                <button v-on:click="createBox">
+                <label for="numberOfBoxes">
+                    <span>Number Of Boxes</span>
+                    <input v-model="nBoxes" id="numberOfBoxes" type="number" min="0" required>
+                </label>
+
+                <label for="width">
+                    <span>Width</span>
+                    <input id="width" v-model="box.width" type="number" min="50">
+                </label>
+
+                <label for="height">
+                    <span>Height</span>
+                    <input id="height" v-model="box.height" type="number" min="50">
+                </label>
+
+                <label for="color">
+                    <span>Color</span>
+                    <input id="color" v-model="box.color" type="color">
+                </label>
+
+                <label for="message">
+                    <span>Message</span>
+                    <input id="message" v-model="box.content" type="text">
+                </label>
+
+                <button v-on:click="createBoxes">
                     Create Box
                 </button>
 
             </div>
+
+        </div>
+        
+        <div v-bind:style="{
+            border:'2px solid'+box.color,
+            color:box.color,
+            width:box.width+'px',
+            height:box.height+'px',
+        }">
+            {{box.content}}
         </div>
 
     </div>
