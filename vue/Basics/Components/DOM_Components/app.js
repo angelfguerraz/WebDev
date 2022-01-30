@@ -37,8 +37,6 @@ Vue.component('coinDetail', {
     <img 
       v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices" v-bind:src="coin.img" v-bind:alt="coin.name">
 
-      <span v-on:click="toggleShowPrices">{{showPrices? '🙉' : '🙈' }}</span>
-
     <h1 
     v-bind:class="{
     orange: coin.changePercent === 0,
@@ -62,7 +60,10 @@ Vue.component('coinDetail', {
     <input type="number" v-model="value">
     <span>{{convertedValue}}</span>
 
-    <ul>
+    <slot name="text"></slot>
+    <slot name="link"></slot>
+
+    <ul v-show="showPrices">
       <h3>Display simple Array</h3>
       <li v-for="(p, i) in coin.pricesWithDays" v-bind:key="p">
         {{i}} -- {{p.day}} -- {{p.value}} 
@@ -112,6 +113,14 @@ new Vue({
   // Computed Properties: Functions with a return value
   computed: {
     //insert computed parent properties
+  },
+
+  created(){
+    console.log('Created...')
+  },
+
+  mounted(){
+    console.log('Mounted...')
   },
 
   // Watchers: 

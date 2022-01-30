@@ -1,0 +1,18 @@
+### Steps for landing page ###
+A) Initial Setup
+1. Figma 
+2. Download assets
+3. Add/choose Fonts (Google fonts) Max 2
+4. Base Styles (*, html, body)
+	/* 
+	1. Position
+	2. Box-Model
+	3. Fonts
+	4. Visual effects (colors, shadows)
+	5. Miscellaneous 
+	*/
+B) Header:
+1. Header structure
+2. BIM implementation (class, id)
+3. Styling (color, fonts, ...)
+4. Buttons

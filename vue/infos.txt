@@ -2,8 +2,18 @@
 Link Vue:
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
+Communication Parent-Child:
+props: [...]
 
--- Vue Object:
+Communication Child-Parent:
+this.$emit('event_name')
+
+<modal v-on:event_name="function2call">
+
+templates: 
+<slot name="slots_name"></slot>
+
+-- Vue Component:
 Vue.component('comp_name',{
 	data(){...},
 	methods:{...},

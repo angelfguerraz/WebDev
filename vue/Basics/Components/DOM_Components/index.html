@@ -16,9 +16,18 @@
 
 
     <!--Component-->
-    <coin-Detail 
-    v-on:change-color="updateColor"
-    v-bind:coin="btc">
+    <coin-Detail v-on:change-color="updateColor" v-bind:coin="btc">
+
+      <template v-slot:text>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum consequuntur molestias amet earum similique
+          eaque, neque ea, assumenda, odio voluptate velit vel dolore recusandae porro eligendi ratione in numquam
+          animi.</p>
+      </template>
+
+      <template v-slot:link>
+        <a href="#">Link!</a>
+      </template>
+
     </coin-Detail>
 
 
