@@ -16,3 +16,8 @@ B) Header:
 2. BIM implementation (class, id)
 3. Styling (color, fonts, ...)
 4. Buttons
+
+C) Main:
+1. Main structure
+2. BIM
+
