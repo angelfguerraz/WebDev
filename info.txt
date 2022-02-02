@@ -1,0 +1,18 @@
+### GOOD TO KNOW ###
+
+--
+export NODE_OPTIONS=--openssl-legacy-provider
+Works with/if:
+Node v. 17.1.0
+@vue/cli v. 4.5.15
+PowerShell 7.2.0
+Windows 10 v. 20H2
+--
+
+### NPM CODES ###
+npm run serve: 	Runs a server
+npm run build: 	Builds a dist folder in project for production
+npm run lint: 	Checks project for errors
+npm i -g serve: Creates a global command called 'serve'
+serve -s dist: 	Displays project wihtout Vue dependencies
+vue ui: 	Toggles Vue Interface for a more interactive enviroment

@@ -1,3 +1,34 @@
+## Single Page Apps ##
+
+All components are built on the same structure:
+--
+<template>
+	__html-content__
+	!! All imported components MUST be used for webpage to work !!
+	<px-header></px-header>
+	<px-assets-tables></px-assets-tables>
+</template>
+
+<script>
+	import {component--name} from "@/PATH"
+	import PxHeader from "@/components/PxHeader"
+
+	export default{
+		name: "__Comp-name__"
+		name: "App",
+		components: {
+		  __Componnets that this Components uses__
+		  PxHeader,
+		  PxAssetsTable
+		},
+		computed:{},
+		methods:{}
+	}
+</script>
+
+
+
+
 ## VUE ##
 Link Vue:
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
