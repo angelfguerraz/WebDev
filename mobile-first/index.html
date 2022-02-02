@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,7 @@
         <div class="header__title-container">
             <h1>The next revolution on Crypto-Exchange</h1>
             <p>Batatabit helps you to navy through the new trends and prices</p>
-            <a class="header__button" href="#">
+            <a class="header__button" href="#subscriptions">
                 Get to know our offers
                 <span></span>
             </a>
@@ -31,6 +32,7 @@
     </header>
 
     <main>
+        <!--Tables-->
         <section class="main__exchange-container">
             <div class="background-img"></div>
             <div class="main__exchange-container--title">
@@ -67,15 +69,63 @@
                         </p>
                     </div>
                 </div>
+                <div class="main-currency-table">
+                    <p class="currency-table__title">Coins</p>
+                    <div class="currency-table__container">
+                        <table>
+                            <tr>
+                                <td class="table__top-left">Bitcoin</td>
+                                <td class="table__top-right table-right">$1.96 <span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Etherium</td>
+                                <td class="table-right">$0.07 <span class="up"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Stellar</td>
+                                <td class="table-right">$4.96 <span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="table__bottom-left">Ripple</td>
+                                <td class="table__bottom-right table-right">$2.15 <span class="down"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="currency-table__date">
+                        <p>
+                            <b>Updated:</b>
+                            <script> document.write(new Date().toLocaleString()); </script>
+                        </p>
+                    </div>
+                </div>
             </section>
         </section>
+        <!--Cards-->
         <section class="main__product-detail">
             <span class="product-detail__batata-logo"></span>
             <div class="product-detail__title">
                 <h2>We created an outrageous product</h2>
                 <p>Reliable and design for daily use</p>
             </div>
-            <section class="product-crads__container">
+            <section class="product-cards__container">
+                <article class="product-detail__card">
+                    <span class="product__card-icon"></span>
+                    <p class="product__card-title">Real Time</p>
+                    <p class="product__card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto tempore nihil
+                        voluptatum distinctio nam aliquam sit reiciendis dolores, quaerat, libero temporibus
+                        consequatur. Vel deleniti similique corporis vero non unde.
+                    </p>
+                </article>
+                <article class="product-detail__card">
+                    <span class="product__card-icon"></span>
+                    <p class="product__card-title">Real Time</p>
+                    <p class="product__card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto tempore nihil
+                        voluptatum distinctio nam aliquam sit reiciendis dolores, quaerat, libero temporibus
+                        consequatur. Vel deleniti similique corporis vero non unde.
+                    </p>
+                </article>
                 <article class="product-detail__card">
                     <span class="product__card-icon"></span>
                     <p class="product__card-title">Real Time</p>
@@ -87,12 +137,78 @@
                 </article>
             </section>
         </section>
-        <section></section>
-        <section></section>
+        <!--Image-Background-->
+        <section class="bitcoin-img__container">
+            <h2>Get to know us!</h2>
+        </section>
+        <!--Carousel Cards-->
+        <section id="subscriptions" class="main-plans__container">
+            <div class="main-plans__title">
+                <h2>Choose the plans that suits you the best</h2>
+                <p>All of them offer you access to our platform</p>
+            </div>
+            <section class="plans-container__slider">
+                <!--Cards-->
+                <article class="plans-container__card">
+                    <p class="suggested">Suggested</p>
+                    <div class="plan-info__container">
+                        <h3 class="plan-card__title">Yearly Subscription</h3>
+                        <p class="plan-card__price"><span>$</span>99</p>
+                        <p class="plan-card__saving">*You save $129 in comparison with the monthly subscription</p>
+                        <button class="plan-card__ca">Buy me<span></span></button>
+                    </div>
+                </article>
+                <article class="plans-container__card">
+                    <p class="suggested">Suggested</p>
+                    <div class="plan-info__container">
+                        <h3 class="plan-card__title">Yearly Subscription</h3>
+                        <p class="plan-card__price"><span>$</span>99</p>
+                        <p class="plan-card__saving">*You save $129 in comparison with the monthly subscription</p>
+                        <button class="plan-card__ca">Buy me<span></span></button>
+                    </div>
+                </article>
+                <article class="plans-container__card">
+                    <p class="suggested">Suggested</p>
+                    <div class="plan-info__container">
+                        <h3 class="plan-card__title">Yearly Subscription</h3>
+                        <p class="plan-card__price"><span>$</span>99</p>
+                        <p class="plan-card__saving">*You save $129 in comparison with the monthly subscription</p>
+                        <button class="plan-card__ca">Buy me<span></span></button>
+                    </div>
+                </article>
+                <article class="plans-container__card">
+                    <p class="suggested">Suggested</p>
+                    <div class="plan-info__container">
+                        <h3 class="plan-card__title">Yearly Subscription</h3>
+                        <p class="plan-card__price"><span>$</span>99</p>
+                        <p class="plan-card__saving">*You save $129 in comparison with the monthly subscription</p>
+                        <button class="plan-card__ca">Buy me<span></span></button>
+                    </div>
+                </article>
+                <article class="plans-container__card">
+                    <p class="suggested">Suggested</p>
+                    <div class="plan-info__container">
+                        <h3 class="plan-card__title">Yearly Subscription</h3>
+                        <p class="plan-card__price"><span>$</span>99</p>
+                        <p class="plan-card__saving">*You save $129 in comparison with the monthly subscription</p>
+                        <button class="plan-card__ca">Buy me<span></span></button>
+                    </div>
+                </article>
+            </section>
+        </section>
     </main>
 
     <footer>
-
+        <section class="left-footer">
+            <ul>
+                <li><a href="#">Linkdin</a></li>
+                <li><a href="#">Crunchbase</a></li>
+                <li><a href="#">Hackernews</a></li>
+            </ul>
+        </section>
+        <section class="right-footer">
+            <img src="./assets/img/logo-footer.svg" alt="Logo_Batatabit_2020">
+        </section>
     </footer>
 
 </body>
