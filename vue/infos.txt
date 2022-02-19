@@ -1,3 +1,32 @@
+## Vue-ROUTER ##
+
+in project: npm i -S vue-router
+
+1. Create in src (@) a file router.js
+2. !! import this file in main.js (import router from '@/router')
+3. Router Structure:
+	import Vue from 'vue'
+	import Router from "vue-router"
+
+	import __components__
+
+	Vue.use(Router)
+
+	export default new Router({
+		mode: "history",
+		
+		// Array with the Paths
+		routes: [
+			{
+			 path: "/",
+			 name: "home",
+			 component: Home
+			}
+		]
+	})
+!!! Vue router hast the tag <router-link to="_path-to-go_"> to navigate between views
+
+
 ## Single Page Apps ##
 
 All components are built on the same structure:
