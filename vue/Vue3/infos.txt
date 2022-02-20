@@ -1,0 +1,35 @@
+### Vue 3 ###
+
+REACTIVITY = Paradigm = Rules to follow to create a system
+Responsive: Adapts to the user
+Resilent & Scalable: Ready for incontengies and capable to grow
+Message-driven: Interaction trough msg-communication
+
+-- effect: 
+-- track: 
+-- trigger: 
+
+PROXIES: Intermediary Server between client and server
+
+
+
+1) Create a vue-app (no build)
+
+<script src="https://unpkg.com/vue@3">
+</script>
+
+<div id=app>
+	{{ msg }}
+</div>
+
+<scirpt>
+	Vue.createApp({
+		data(){
+			return {
+				msg: 'Hello Vue!'
+			}
+		}
+	}).mount('#app')
+</script>
+
+
